@@ -62,7 +62,7 @@ public class Application {
             if(player.getSuccess() >= 7){
                 System.out.println("가게 사장이 되었습니다. 승리하셨습니다.");
                 return;
-            } else if(player.getLoseCustomer() >= 5){
+            } else if(player.getLoseCustomer() >= 4){
                 System.out.println("이렇게 손님을 다 놓치면 돈을 벌 수 없습니다. 해고입니다. 다른 직장을 구하세요");
                 return;
             }
