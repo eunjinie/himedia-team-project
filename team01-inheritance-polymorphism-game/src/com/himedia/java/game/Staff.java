@@ -22,9 +22,8 @@ public class Staff {
 
     public String makeBurger() {
 
-        System.out.println("버거를 만들기 시작합니다.");
-        System.out.println("1.참깨빵, 2.양상추, 3.특별한 소스, 4.양파, 5.치즈, 6.피클, 7.불고기 패티, 8.치킨 패티, 9.새우 패티");
-        System.out.println("Hint : bbb위에 PP 2장, 특별한 SS, lll, CC, pp, OO까지~");
+        System.out.println("\n1.참깨빵, 2.양상추, 3.특별한 소스, 4.양파, 5.치즈, 6.피클, 7.불고기 패티, 8.치킨 패티, 9.새우 패티");
+        System.out.println("Recipe : bbb위에 PP 2장, 특별한 SS, lll, CC, pp, OO까지~\n");
         System.out.print("순서에 맞게 번호를 눌러주세요 : ");
 
         result = sc.nextLine();
