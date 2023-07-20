@@ -17,11 +17,11 @@ public class Application {
         Hamburger orderedHamburger = null;
 
         while(true) {
-            System.out.println("\"안녕하세요 하이미디어 햄버거 가게입니다.\"\n" + "\"무엇을 주문하시겠습니까?\" " + Arrays.toString(menu));
+            System.out.println("메뉴 : " + Arrays.toString(menu));
             int order = (int) (Math.random() * 4);
-
-            System.out.println("\"빼고 싶은 재료가 있습니까?\" [양상추, 양파, 치즈, 피클]");
+            System.out.println("제외할 재료 : " + Arrays.toString(exceptIngredients));
             int minus = (int)(Math.random() * 5);
+
             System.out.println("====================================================================================");
             System.out.println( menu[order] + " 주문이 들어왔습니다.(제외 : " + exceptIngredients[minus]+")");
             System.out.println("====================================================================================");
@@ -76,5 +76,6 @@ public class Application {
 
 
     }
+
 }
 

@@ -13,7 +13,7 @@ public class Hamburger {
     public static final String SHRIMP = "9";
 
     public String BurgerRecipe(){
-       String recipe = new StringBuilder(BREAD + SOURCE + LETTUCE + CHEESE + PICKLE + ONION).toString();
+       String recipe = new StringBuilder(BREAD + SOURCE + LETTUCE + CHEESE + PICKLE + ONION + BREAD).toString();
         return recipe;
     }
 
