@@ -22,7 +22,9 @@ public class Application {
 
             System.out.println("\"빼고 싶은 재료가 있습니까?\" [양상추, 양파, 치즈, 피클]");
             int minus = (int)(Math.random() * 5);
-            System.out.println( "\n" + menu[order] + " 주문이 들어왔습니다.(제외 : " + exceptIngredients[minus] + ")\n");
+            System.out.println("====================================================================================");
+            System.out.println( menu[order] + " 주문이 들어왔습니다.(제외 : " + exceptIngredients[minus]+")");
+            System.out.println("====================================================================================");
             long beforeTime = System.currentTimeMillis(); // 코드 실행 전 시간 받아오기
             //주문은 직접 입력받지 않고 random하게 출력되도록 함.
 
@@ -48,8 +50,10 @@ public class Application {
             System.out.println("소요 시간은 " + secDiffTime + "초 입니다.");
             //버거를 주문하고 나오는데 걸린 시간을 측정해서 15초 이상 걸리면 손님이 떠나고 점수를 잃도록 할거임.
 
+            System.out.println("=====================================================================================");
+
             if(isSuccess && secDiffTime < 15){
-                System.out.println("손님께 올바른 버거가 전달되었습니다.\n다음 손님을 받습니다.\n");
+                System.out.println("손님께 올바른 버거가 전달되었습니다. 다음 손님을 받습니다.\n");
                 player.plusSuccess();
             }else if(isSuccess == false && secDiffTime < 15){
                 System.out.println("순서가 잘못되었습니다. 손님의 컴플레인이 들어왔고 손님은 떠났습니다. 다음 손님을 받습니다.\n");
@@ -59,10 +63,10 @@ public class Application {
                 player.plusLoseCustomer();
             }
 
-            if(player.getSuccess() >= 7){
+            if(player.getSuccess() >= 3){
                 System.out.println("가게 사장이 되었습니다. 승리하셨습니다.");
                 return;
-            } else if(player.getLoseCustomer() >= 4){
+            } else if(player.getLoseCustomer() >= 3){
                 System.out.println("이렇게 손님을 다 놓치면 돈을 벌 수 없습니다. 해고입니다. 다른 직장을 구하세요");
                 return;
             }
