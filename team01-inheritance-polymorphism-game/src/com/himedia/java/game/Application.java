@@ -64,7 +64,7 @@ public class Application {
             }
 
             if(player.getSuccess() >= 3){
-                System.out.println("가게 사장이 되었습니다. 승리하셨습니다.");
+                System.out.println("수습기간이 끝났습니다. 이제 정직원입니다. ㅋㅋ 짝짝짝 ㅋㅋ");
                 return;
             } else if(player.getLoseCustomer() >= 3){
                 System.out.println("이렇게 손님을 다 놓치면 돈을 벌 수 없습니다. 해고입니다. 다른 직장을 구하세요");
