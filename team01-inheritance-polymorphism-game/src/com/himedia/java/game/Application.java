@@ -30,7 +30,7 @@ public class Application {
             System.out.println("====================================================================================");
             System.out.println(menu[order] + " 주문이 들어왔습니다.(제외 : " + exceptIngredients[minus]+")");
             System.out.println("====================================================================================");
-            long beforeTime = System.currentTimeMillis(); // 코드 실행 전 시간 받아오기
+            long beforeTime = System.currentTimeMillis(); // 코드 실행 시 시간을 long 타입을 반환한다. (1970년 1월 1일 기준)
 
 
             String except = exceptIngredients[minus]; //CustomMade에서 switch 돌려서 뺄 재료 찾기 위해 변수 선언함.
