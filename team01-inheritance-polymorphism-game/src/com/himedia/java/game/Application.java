@@ -9,13 +9,13 @@ public class Application {
 
         Staff player = new Staff(); //매장의 직원이 곧 플레이어다
 
-        String[] menu = {"베지버거", "새우버거", "치킨버거", "불고기버거"};
+        String[] menu = {"베지버거", "새우버거", "치킨버거", "불고기버거"}; //베지버거를 기반으로 각각의 버거에 패티 추가되도록 구성
         String[] exceptIngredients = {"양상추", "양파", "치즈", "피클", "선택 안함"}; //못먹는 재료가 있다면 빼도록 함.
 
         Hamburger orderedHamburger = null;
 
         Info ready = new Info();
-        boolean isStart = ready.gameStart();
+        boolean isStart = ready.gameStart(); //게임 스타트 할건지 물어보고 시작함
         if(isStart == false){ return; }
 
         while(true) {
@@ -23,17 +23,17 @@ public class Application {
             int minus = (int)(Math.random() * 5);
 
             switch (order) {
-                case 0 : orderedHamburger = new Hamburger(); break; //Hamburger는 패티가 들어가지 않은 기본 버거임
+                case 0 : orderedHamburger = new Hamburger(); break; //Hamburger는 패티가 들어가지 않은 베지 버거임
                 case 1 : orderedHamburger = new ShrimpBurger(); break;
                 case 2 : orderedHamburger = new ChickenBurger(); break;
                 case 3 : orderedHamburger = new BulgogiBurger(); break;
             }
-
+            //주문은 직접 입력받지 않고 random하게 출력되도록 함.
             System.out.println("====================================================================================");
             System.out.println(menu[order] + " 주문이 들어왔습니다.(제외 : " + exceptIngredients[minus]+")");
             System.out.println("====================================================================================");
             long beforeTime = System.currentTimeMillis(); // 코드 실행 전 시간 받아오기
-            //주문은 직접 입력받지 않고 random하게 출력되도록 함.
+
 
             String except = exceptIngredients[minus]; //CustomMade에서 switch 돌려서 뺄 재료 찾기 위해 변수 선언함.
 
