@@ -8,7 +8,7 @@ public class Application {
         Staff player = new Staff(); //매장의 직원이 곧 플레이어다
 
         String[] menu = {"베지버거", "새우버거", "치킨버거", "불고기버거"}; //베지버거를 기반으로 각각의 버거에 패티 추가되도록 구성
-        String[] exceptIngredients = {"양상추", "양파", "치즈", "피클", "선택 안함"}; //못먹는 재료가 있다면 빼도록 함.
+        String[] exceptIngredients = {"양상추", "양파", "치즈", "피클", "선택 안함"}; //못먹는 재료가 있다면 뺄 수 있게 함.
 
         Hamburger orderedHamburger = null;
 
@@ -38,10 +38,10 @@ public class Application {
             CustomMade customBurger = new CustomMade(); //원래의 버거 레시피에서 손님이 주문한 버거로 제작되도록 함.
 
             String customizedBurger = customBurger.customizeBurger(orderedHamburger.BurgerRecipe(), except);
-            //인자로 원래의 버거 레시피와 뺄 재료를 줘서 custom한 burger가 만들어지도록 함.
+            //인자로 원래의 버거 레시피와 뺄 재료를 줘서 custom한 burger 레시피가 만들어지도록 함.
 
             boolean isSuccess = player.makeBurger().equals(customizedBurger);
-            //custom한 burger와 player가 입력한 버거와 같으면 성공임.
+            //custom한 burger와 player가 입력한 버거가 같으면 성공임.
 
             long afterTime = System.currentTimeMillis();
             long secDiffTime = (afterTime - beforeTime) / 1000;
