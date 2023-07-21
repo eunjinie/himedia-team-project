@@ -5,8 +5,6 @@ import java.util.Scanner;
 public class Application {
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
-
         Staff player = new Staff(); //매장의 직원이 곧 플레이어다
 
         String[] menu = {"베지버거", "새우버거", "치킨버거", "불고기버거"}; //베지버거를 기반으로 각각의 버거에 패티 추가되도록 구성
