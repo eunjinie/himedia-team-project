@@ -60,7 +60,7 @@ public class Application {
             }
 
             if(player.getSuccess() >= 3){
-                System.out.println("수습기간이 끝났습니다. 이제 정직원입니다. ㅋㅋ 짝짝짝 ㅋㅋ");
+                System.out.println("수습기간이 끝났습니다. 이제 정직원. ㅋㅋ 짝짝짝 ㅋㅋ");
                 return;
             } else if(player.getLoseCustomer() >= 3){
                 System.out.println("강재원 황주희 이은진 이었습니다.");
